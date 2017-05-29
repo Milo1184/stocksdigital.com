@@ -1,0 +1,5 @@
+.env
+.editorconfig
+robots.txt
+*.cache
+includes/globals/
