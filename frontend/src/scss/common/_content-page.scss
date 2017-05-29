@@ -1,0 +1,45 @@
+.content-page{
+  @include media-breakpoint-up(md){
+    padding-top: 50px;
+  }
+
+  h1{
+    font-weight: 500;
+    margin: 30px 0;
+  }
+
+  h5{
+    margin: 15px 0;
+  }
+
+  p{
+    display: block;
+    margin: 15px 0;
+    color: $grey-medium;
+  }
+
+  img{
+    display: block;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .btn{
+    display: block;
+    width: 250px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    white-space: pre-wrap;
+
+    &:hover:not([disabled]),
+    &:focus:not([disabled]){
+      color: #fff;
+      border-color: $orange;
+      background-color: $orange;
+    }
+
+    &.btn-center{
+      margin: 20px auto;
+    }
+  }
+}

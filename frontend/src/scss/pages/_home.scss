@@ -1,0 +1,235 @@
+body.home{
+  color: #fff;
+
+  .banner{
+    height: 620px;
+    position: relative;
+    overflow: hidden;
+
+
+    .video-container{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url(/images/homepage_pic.jpg) no-repeat;
+
+      .filter{
+        background-color: $filter-blue;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      video{
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 0;
+
+        @include media-breakpoint-up(md){
+          display: block;
+        }
+      }
+    }
+
+
+    .container{
+      height: 100%;
+      z-index: 2;
+
+      .row{
+        height: 100%;
+
+        .col{
+          text-transform: uppercase;
+
+          h1{
+            font-size: 4rem;
+            font-weight: 600;
+            color: #fff;
+            margin-top: 60px;
+
+            @include media-breakpoint-up(sm){
+              margin-top: 0;
+            }
+          }
+
+          p{
+            display: block;
+            max-width: 500px;
+            margin-bottom: 30px;
+            font-size: 1.7rem;
+          }
+
+          .banner-link{
+            background: $orange no-repeat 10px center;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            padding: 10px;
+            padding-left: 40px;
+            font-size: 1.4rem;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            width: 160px;
+          }
+
+          .pricing {
+            background-image: url(../images/icon-pricing.png);
+            background-position-x: 15px;
+          }
+          .services {
+            background-image: url(../images/icon-services.png);
+          }
+        }
+      }
+    }
+  }
+
+  .panel{
+    width: 100%;
+    height: 447px;
+    background-repeat: no-repeat;
+    
+
+    .row{
+      height: 100%;
+      margin: 0;
+    }
+    .text-box{
+      display: flex;
+      align-items: stretch;
+      height: 100%;
+      padding: 0;
+
+      .text-holder{
+        padding: 0 30px;
+        @include media-breakpoint-up(sm){
+          padding: 0 60px;
+        }
+        @include media-breakpoint-up(lg){
+          padding: 0 100px;
+        }
+
+        p, li{
+          font-size: 1.6rem;
+          line-height: 2.2rem;
+        }
+      }
+    }
+
+    &.panel-1{
+      background-color: #0e1215;
+      background-image: url(../images/panels/panel-1.jpg);
+      background-position-x: 10%;
+
+      @include media-breakpoint-up(md){
+        background-position-x: auto;
+      }
+
+      .text-box{
+        background-color: $filter-panel-blue;
+      }
+    }
+
+    &.panel-2{
+      background-color: #6d6870;
+      background-image: url(../images/panels/panel-2.jpg);
+      background-position-x: 60%;
+
+      @include media-breakpoint-up(md){
+        background-position-x: 100%;
+      }
+
+      .text-box{
+        background-color: $filter-orange;
+
+        ul{
+          padding: 0 0 0 20px;
+        }
+      }
+    }
+  }
+
+  .services{
+    padding: 60px 0;
+    background-color: $blue;
+
+    .service{
+      text-align: center;
+      padding: 20px;
+      cursor: pointer;
+
+      a{
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .icon{
+        display: flex;
+        height: 150px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h4{
+        padding-bottom: 20px;
+      }
+
+      p{
+        padding: 0 30px;
+        line-height: 1.2;
+      }
+
+      &:hover{
+        .icon{
+          background: url(/images/services/hover-bg.png) no-repeat center;
+        }
+      }
+    }
+  }
+
+  .featured-resources{
+    background-color: $grey-medium;
+    padding-top: 60px;
+
+    .resource{
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .resource-button{
+      display: block;
+      background-color: $grey;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 0;
+      width: 218px;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 30px auto;
+      transition: background-color .2s ease-in;
+
+      &:hover{
+        background-color: $orange;
+      }
+    }
+  }
+
+  .our-clients{
+    background-color: #fff;
+    color: $grey;
+    padding: 60px 0;
+    .clientlogo{
+      padding-top: 40px;
+      max-width: 100%;
+    }
+  }
+}

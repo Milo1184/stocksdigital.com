@@ -1,0 +1,23 @@
+.required{
+  color: $orange;
+  margin-left: 5px;
+}
+
+
+form{
+  margin: 20px 0;
+  [class*="col-"]{
+    margin-bottom: 20px;
+  }
+
+  .submit-button{
+    cursor: pointer;
+  }
+
+  .form-control::placeholder{
+    color: $blue;
+  }
+  .form-control-lg{
+    font-size: 1.35rem;
+  }
+}
