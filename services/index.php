@@ -1,0 +1,1 @@
+<?php header('Location: '. $root .'/services/research-coverage/', 301); ?>
